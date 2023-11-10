@@ -24,7 +24,7 @@ class _Page1State extends State<Page1> {
       );
     }
     catch(e) {
-      print(e); // better to reove print in release version
+      print(e); // better to remove print in release version
     }
   }
 
