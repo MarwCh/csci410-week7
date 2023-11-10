@@ -15,7 +15,7 @@ class Page2 extends StatelessWidget {
       ),
       body: Center(child: Column(children: [
         const SizedBox(height: 10),
-        Text('Net Salary: ${employee.netSalary()}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        Text(employee.toString(), style: const TextStyle(color: Colors.lightGreen, fontSize: 24, fontWeight: FontWeight.bold)),
         const SizedBox(height: 10),
         ElevatedButton(onPressed: () {
           Navigator.of(context).pop();

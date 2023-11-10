@@ -1,7 +1,7 @@
 class Employee {
   int _hours = 0;
   double _rate = 0;
-  final double tax = 0.1; // default 10% tax
+  final double _tax = 0.1; // default 10% tax
 
   Employee(int hours, double rate) {
     if (hours <= 0 || rate <= 0) {
@@ -12,6 +12,15 @@ class Employee {
   }
 
   double netSalary() {
-    return (_hours * _rate) * (1 - tax);
+    return (_hours * _rate) * (1 - _tax);
+  }
+
+  @override
+  String toString() {
+    return """
+      Hours: $_hours
+      Rate: $_rate
+      Tax: ${_tax * 100}%
+    Net Salary: ${netSalary()} """;
   }
 }
