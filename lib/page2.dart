@@ -1,3 +1,4 @@
+import 'package:csci410week7/employee.dart';
 import 'package:flutter/material.dart';
 
 class Page2 extends StatelessWidget {
@@ -5,12 +6,16 @@ class Page2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final employee = ModalRoute.of(context)!.settings.arguments as Employee;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Page 2'),
         centerTitle: true,
       ),
       body: Center(child: Column(children: [
+        const SizedBox(height: 10),
+        Text('Net Salary: ${employee.netSalary()}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         const SizedBox(height: 10),
         ElevatedButton(onPressed: () {
           Navigator.of(context).pop();
